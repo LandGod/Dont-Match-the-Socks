@@ -1,3 +1,31 @@
+# Working Title: Don't Match the Socks
+
+## About the Game
+
+As the the development of this game is only beginning to be developed at the time of this writing, all of this is subject to change. That said, the basic idea for the game is that if you are someone who wears pattered socks, you certainly wouldn't want to ever wear a matching pair (unless you're a psychopath). But let's take things a step further. Lets try to have 14 unique socks, 2 for each day of the week, never once wearing a single sock more than once.
+
+### User Stories
+
+* As a user I can try to pick a unique sock from a grid of 14 unique socks.
+* As a user I can keep track of my streak of correctly un-matched socks, up to 14.
+* As as user I will see my socks rearranged after each selection, such that there is a challenge in keeping track of which socks I have already selected. 
+* As a user I can keep track of the number of times I have gotten a perfect score.
+* As a user I can keep track of my highest perfect score *streak*.
+
+### Alternate Titles
+
+* Don't be a psychopath 
+* Socks to be you
+* Socks to sock
+
+
+
+---------------------------------------------------------
+
+
+
+## Information about the React Implementation in this Project:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
