@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavTabs from "./components/NavTabs";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+// import NavTabs from "./components/NavTabs";
+// import Home from "./components/pages/Home";
+// import About from "./components/pages/About";
 // import socks from "./socks.json"
 import './App.css';
 import MatchCard from "./components/MatchCard";
