@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Dont-Match-the-Socks/static/css/main.b100e6da.chunk.css",
+    "main.js": "/Dont-Match-the-Socks/static/js/main.4a5a9c0e.chunk.js",
+    "main.js.map": "/Dont-Match-the-Socks/static/js/main.4a5a9c0e.chunk.js.map",
+    "runtime-main.js": "/Dont-Match-the-Socks/static/js/runtime-main.4b13d99b.js",
+    "runtime-main.js.map": "/Dont-Match-the-Socks/static/js/runtime-main.4b13d99b.js.map",
+    "static/css/2.b0bb7f2c.chunk.css": "/Dont-Match-the-Socks/static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.b0429ca8.chunk.js": "/Dont-Match-the-Socks/static/js/2.b0429ca8.chunk.js",
+    "static/js/2.b0429ca8.chunk.js.map": "/Dont-Match-the-Socks/static/js/2.b0429ca8.chunk.js.map",
+    "index.html": "/Dont-Match-the-Socks/index.html",
+    "precache-manifest.98fe3256c5ffb63f947946d3d40bb28f.js": "/Dont-Match-the-Socks/precache-manifest.98fe3256c5ffb63f947946d3d40bb28f.js",
+    "service-worker.js": "/Dont-Match-the-Socks/service-worker.js",
+    "static/css/2.b0bb7f2c.chunk.css.map": "/Dont-Match-the-Socks/static/css/2.b0bb7f2c.chunk.css.map",
+    "static/css/main.b100e6da.chunk.css.map": "/Dont-Match-the-Socks/static/css/main.b100e6da.chunk.css.map",
+    "static/media/blackSock.png": "/Dont-Match-the-Socks/static/media/blackSock.418c7bb6.png",
+    "static/media/blueBlackArgyleSock.png": "/Dont-Match-the-Socks/static/media/blueBlackArgyleSock.11699d2e.png",
+    "static/media/blueWhiteDotSock.png": "/Dont-Match-the-Socks/static/media/blueWhiteDotSock.77be3dca.png",
+    "static/media/greenStripeSock.png": "/Dont-Match-the-Socks/static/media/greenStripeSock.afd152ae.png",
+    "static/media/greyBlueArgyleSock.png": "/Dont-Match-the-Socks/static/media/greyBlueArgyleSock.539f7e4c.png",
+    "static/media/greyPinkArgyleSock.png": "/Dont-Match-the-Socks/static/media/greyPinkArgyleSock.032f059b.png",
+    "static/media/greyPurpleArgyleSock.png": "/Dont-Match-the-Socks/static/media/greyPurpleArgyleSock.1ca13965.png",
+    "static/media/greyPurpleDotSock.png": "/Dont-Match-the-Socks/static/media/greyPurpleDotSock.a59c8e1c.png",
+    "static/media/greyRedArgyleSock.png": "/Dont-Match-the-Socks/static/media/greyRedArgyleSock.e74ba886.png",
+    "static/media/greyRedDotSock.png": "/Dont-Match-the-Socks/static/media/greyRedDotSock.0f31f62b.png",
+    "static/media/ojDotSock.png": "/Dont-Match-the-Socks/static/media/ojDotSock.87b69727.png",
+    "static/media/purpleStripeSock.png": "/Dont-Match-the-Socks/static/media/purpleStripeSock.bfb1b60e.png",
+    "static/media/redDotSock.png": "/Dont-Match-the-Socks/static/media/redDotSock.dee828a2.png",
+    "static/media/yellowStripeSock.png": "/Dont-Match-the-Socks/static/media/yellowStripeSock.19015bf6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b13d99b.js",
+    "static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.b0429ca8.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.4a5a9c0e.chunk.js"
+  ]
+}
