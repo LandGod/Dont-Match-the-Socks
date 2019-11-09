@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64bac3492be88432198bd26738f3a143",
+    "revision": "d696462ac0b5c8c192f3aebfb0ecdbc3",
     "url": "/Dont-Match-the-Socks/index.html"
   },
   {
-    "revision": "ac900c89cc429b4f1175",
+    "revision": "fb0d74738b2f5720f917",
     "url": "/Dont-Match-the-Socks/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "16f5033940d965140440",
+    "revision": "a83d497368ebd55d627e",
     "url": "/Dont-Match-the-Socks/static/css/main.b100e6da.chunk.css"
   },
   {
-    "revision": "ac900c89cc429b4f1175",
-    "url": "/Dont-Match-the-Socks/static/js/2.b0429ca8.chunk.js"
+    "revision": "fb0d74738b2f5720f917",
+    "url": "/Dont-Match-the-Socks/static/js/2.41c7a5a2.chunk.js"
   },
   {
-    "revision": "16f5033940d965140440",
-    "url": "/Dont-Match-the-Socks/static/js/main.4a5a9c0e.chunk.js"
+    "revision": "a83d497368ebd55d627e",
+    "url": "/Dont-Match-the-Socks/static/js/main.b08e14e4.chunk.js"
   },
   {
     "revision": "d93dad88f1edfb56412a",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Dont-Match-the-Socks/precache-manifest.98fe3256c5ffb63f947946d3d40bb28f.js"
+  "/Dont-Match-the-Socks/precache-manifest.20ae913d499c99282eff0fcc8bac55c4.js"
 );
 
 self.addEventListener('message', (event) => {
