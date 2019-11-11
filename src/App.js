@@ -7,7 +7,6 @@ import React, { Component } from "react";
 import "./App.css";
 import MatchCard from "./components/MatchCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DefaultModal from "./components/Modal";
 import ScoreContainer from "./components/ScoreContainer";
 
 class App extends Component {
@@ -99,7 +98,8 @@ class App extends Component {
     ],
     currentScore: 0,
     highScore: 0,
-    perfectScoreStreak: 0
+    perfectScoreStreak: 0,
+    perfectScoreStreakBest: 0
   };
 
   componentDidMount() {
@@ -122,28 +122,50 @@ class App extends Component {
   };
 
   selectSock = id => {
-    console.log(id);
 
+    // Using set state with anonymous function pattern so that we can get the previous state as an argument to work with
     this.setState(prevState => {
+
+      // First check which sock was clicked
       for (let i = 0; i < prevState.socks.length; i++) {
         if (prevState.socks[i] && prevState.socks[i].id === id) {
-          console.log(prevState.socks[i].clicked);
+
+          // If sock has already been clicked, game over, reset score
           if (prevState.socks[i].clicked === true) {
             console.log("Game Over!");
-          } else {
+            // Reset all socks to unclicked
+            for (let i = 0; i < prevState.socks.length; i++) {
+              prevState.socks[i].clicked = false;
+            }
+            // Update state with altered info and reset score
+            return { 
+              socks: prevState.socks,
+              currentScore: 0
+            }
+          } 
+
+          // If sock has not already been clicked
+          else {
+            // Mark it as clicked
             prevState.socks[i].clicked = true;
-            console.log("set one to true!");
+
+            // If incrementing score would hit 14, then declare game won and increment high scores accordingly
             if (this.state.currentScore === 13) {
-              console.log("WIN!");
               for (let i = 0; i < prevState.socks.length; i++) {
                 prevState.socks[i].clicked = false;
               }
               prevState.currentScore = 0;
               prevState.highScore = 14;
               prevState.perfectScoreStreak += 1;
+              if (prevState.perfectScoreStreakBest < prevState.perfectScoreStreak) {
+                prevState.perfectScoreStreakBest = prevState.perfectScoreStreak
+              };
 
               return { prevState };
-            } else {
+            } 
+
+            // If game would not end, then increment score (and high score if applicable) accordingly
+            else {
               return {
                 socks: prevState.socks,
                 currentScore: prevState.currentScore + 1,
@@ -158,24 +180,24 @@ class App extends Component {
       }
     });
 
+    // And no matter what else happens, always shuffle the order that the socks are displayed in
     this.shuffleSocks();
   };
 
   render() {
     return (
       <div className="container">
-        <ScoreContainer 
-        currentScore={this.state.currentScore}
-        highScore={this.state.highScore}
-        highScoreStreak={this.state.perfectScoreStreak}
+        <ScoreContainer
+          currentScore={this.state.currentScore}
+          highScore={this.state.highScore}
+          highScoreStreak={this.state.perfectScoreStreak}
+          highScoreStreakBest={this.state.perfectScoreStreakBest}
         />
         <h1>Don't match the socks!</h1>
         <div className="container">
           <div className="row">
-            {/* Having issues with undefined values being added to my sock array. Not sure what is causing that, but the filter is a stopgap for now */}
-            {console.log(this.state.socks)}
+            {/* Rendering all socks */}
             {this.state.socks
-              .filter(item => item !== undefined)
               .map(sock => (
                 <MatchCard
                   key={sock.id}
