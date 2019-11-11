@@ -3,7 +3,19 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 
 function DefaultModal(props) {
+
+    // If the show prop isn't set to true, don't render anything
+    if (!props.show) {
+        console.log('Show is not true');
+        return null;
+    };
+
+    console.log("Rendering modal")
+    console.log(`props.show is ${props.show}`)
+
+    // else render modal
     return (
+
         <Modal
             {...props}
             size="lg"

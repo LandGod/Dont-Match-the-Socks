@@ -8,6 +8,7 @@ import "./App.css";
 import MatchCard from "./components/MatchCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScoreContainer from "./components/ScoreContainer";
+import DefaultModal from "./components/DefaultModal";
 
 class App extends Component {
   state = {
@@ -99,7 +100,11 @@ class App extends Component {
     currentScore: 0,
     highScore: 0,
     perfectScoreStreak: 0,
-    perfectScoreStreakBest: 0
+    perfectScoreStreakBest: 0,
+    // Modal info:
+    showModal: false,
+    modalTitle: 'Error',
+    modalText: 'An unknown error occured'
   };
 
   componentDidMount() {
@@ -138,11 +143,11 @@ class App extends Component {
               prevState.socks[i].clicked = false;
             }
             // Update state with altered info and reset score
-            return { 
+            return {
               socks: prevState.socks,
               currentScore: 0
             }
-          } 
+          }
 
           // If sock has not already been clicked
           else {
@@ -162,7 +167,7 @@ class App extends Component {
               };
 
               return { prevState };
-            } 
+            }
 
             // If game would not end, then increment score (and high score if applicable) accordingly
             else {
@@ -184,9 +189,24 @@ class App extends Component {
     this.shuffleSocks();
   };
 
+  setModalShow = bool => {
+    console.log('setModalShow')
+    console.log(bool)
+    if (!bool) {this.setState({showModal: false})}
+    else {this.setState({showModal: true})}
+  }
+
   render() {
     return (
       <div className="container">
+
+        <DefaultModal
+          show={this.state.showModal}
+          title={this.state.modalTitle}
+          text={this.state.modalText}
+          onHide={() => this.setModalShow(false)}
+        />
+
         <ScoreContainer
           currentScore={this.state.currentScore}
           highScore={this.state.highScore}
