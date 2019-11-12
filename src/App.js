@@ -137,15 +137,21 @@ class App extends Component {
 
           // If sock has already been clicked, game over, reset score
           if (prevState.socks[i].clicked === true) {
-            console.log("Game Over!");
+
             // Reset all socks to unclicked
             for (let i = 0; i < prevState.socks.length; i++) {
               prevState.socks[i].clicked = false;
             }
+
             // Update state with altered info and reset score
+            // Also popup modal with game over info
             return {
               socks: prevState.socks,
-              currentScore: 0
+              currentScore: 0,
+              perfectScoreStreak: 0,
+              modalTitle: 'Game Over!',
+              modalText: "Oh no, it looks like you selected one of the socks more than once. That's tantamount to a matching pair! Only a psychopath would match thier socks! Better start over from the begining. Press 'Okay' to try again.",
+              showModal: true
             }
           }
 
@@ -165,6 +171,11 @@ class App extends Component {
               if (prevState.perfectScoreStreakBest < prevState.perfectScoreStreak) {
                 prevState.perfectScoreStreakBest = prevState.perfectScoreStreak
               };
+
+              // Set modal info to reflect a win
+              prevState.modalTitle = 'You Win!';
+              prevState.modalText = "Congratulations! You didn't match any socks. Way to go! Think you can keep your streak going? Hit 'Okay' to go again.";
+              prevState.showModal = true;
 
               return { prevState };
             }
@@ -190,10 +201,18 @@ class App extends Component {
   };
 
   setModalShow = bool => {
-    console.log('setModalShow')
-    console.log(bool)
-    if (!bool) {this.setState({showModal: false})}
-    else {this.setState({showModal: true})}
+
+    if (!bool) {
+      // Reset to default values & hide modal
+      this.setState({
+        modalTitle: 'Error',
+        modalText: 'An unknown error occured',
+        showModal: false
+      })
+    }
+
+    // Show modal, as is
+    else { this.setState({ showModal: true }) }
   }
 
   render() {
